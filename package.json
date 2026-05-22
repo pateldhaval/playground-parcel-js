@@ -6,16 +6,25 @@
 	"scripts": {
 		"dev": "parcel",
 		"build": "parcel build",
-		"format": "prettier . --write",
+		"lint": "eslint",
+		"format": "prettier --write --ignore-unknown",
 		"prepare": "husky"
 	},
 	"devDependencies": {
+		"@eslint/css": "^1.2.0",
+		"@eslint/js": "^10.0.1",
+		"@eslint/json": "^1.2.0",
+		"eslint": "^10.4.0",
+		"globals": "^17.6.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^17.0.5",
 		"parcel": "^2.14.0",
 		"prettier": "3.8.3"
 	},
 	"lint-staged": {
-		"**/*": "prettier --write --ignore-unknown"
+		"**/*": [
+			"pnpm lint",
+			"pnpm format"
+		]
 	}
 }

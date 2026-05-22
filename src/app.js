@@ -1,1 +1,5 @@
-console.log('Hello world!');
+const init = () => {
+	console.log('Hello world!');
+};
+
+init();
