@@ -1,11 +1,15 @@
-export const setupCounter = (element: HTMLElement) => {
+export const getCounterText = (count: number) => {
+	return `Count: ${count}`;
+};
+
+export const setupCounter = (element: HTMLElement, step = 1) => {
 	let counter = 0;
-	element.innerHTML = `Count: ${counter}`;
+	element.innerHTML = getCounterText(counter);
 
 	const increment = (step = 1) => {
 		counter = counter + step;
-		element.innerHTML = `Count: ${counter}`;
+		element.innerHTML = getCounterText(counter);
 	};
 
-	element.addEventListener('click', () => increment(5));
+	element.addEventListener('click', () => increment(step));
 };
