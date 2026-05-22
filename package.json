@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "parcel",
 		"build": "parcel build",
+		"test": "vitest",
 		"typecheck": "tsc --build --noEmit",
 		"lint": "eslint .",
 		"format": "prettier . --write --ignore-unknown",
@@ -19,10 +20,12 @@
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^17.6.0",
 		"husky": "^9.1.7",
+		"jsdom": "^29.1.1",
 		"lint-staged": "^17.0.5",
 		"parcel": "^2.14.0",
 		"prettier": "3.8.3",
-		"typescript-eslint": "^8.59.4"
+		"typescript-eslint": "^8.59.4",
+		"vitest": "^4.1.7"
 	},
 	"lint-staged": {
 		"**/*": [

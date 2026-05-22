@@ -1,5 +1,7 @@
-const init = (name: string): void => {
-	console.log(`Hello ${name}!`);
-};
+import { setupCounter } from './utils/counter';
+import { greet } from './utils/global';
 
-init('John');
+const button = document.getElementById('counter');
+setupCounter(button as HTMLElement);
+
+console.log(greet('John'));
