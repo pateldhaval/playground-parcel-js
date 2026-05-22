@@ -1,1 +1,5 @@
-pnpm exec lint-staged
+echo 'TYPE CHECKING...'
+pnpm typecheck
+
+echo 'LINTING & FORMATTING...'
+pnpm lint-staged
