@@ -1,0 +1,12 @@
+{
+	"include": ["src/*"],
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "dist",
+		"isolatedModules": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"incremental": true,
+		"tsBuildInfoFile": "dist/.tsconfig.tsbuildinfo"
+	}
+}
