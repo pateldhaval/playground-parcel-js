@@ -6,8 +6,8 @@
 	"scripts": {
 		"dev": "parcel",
 		"build": "parcel build",
-		"lint": "eslint",
-		"format": "prettier --write --ignore-unknown",
+		"lint": "eslint .",
+		"format": "prettier . --write --ignore-unknown",
 		"prepare": "husky"
 	},
 	"devDependencies": {
@@ -15,6 +15,7 @@
 		"@eslint/js": "^10.0.1",
 		"@eslint/json": "^1.2.0",
 		"eslint": "^10.4.0",
+		"eslint-config-prettier": "^10.1.8",
 		"globals": "^17.6.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^17.0.5",
