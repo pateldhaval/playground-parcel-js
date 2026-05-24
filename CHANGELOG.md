@@ -1,5 +1,11 @@
 # parcel-vanilla-starter
 
+## 0.0.2
+
+### Patch Changes
+
+- e521108: button ui updated
+
 ## 0.0.1
 
 ### Patch Changes
