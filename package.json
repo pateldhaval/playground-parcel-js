@@ -13,6 +13,7 @@
 		"prepare": "husky"
 	},
 	"devDependencies": {
+		"@changesets/cli": "^2.31.0",
 		"@eslint/css": "^1.2.0",
 		"@eslint/js": "^10.0.1",
 		"@eslint/json": "^1.2.0",
