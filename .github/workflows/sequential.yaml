@@ -1,0 +1,33 @@
+name: sequential-workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-1:
+    runs-on: ubuntu-slim
+    steps:
+      - name: job-1.1
+        run: echo "Job 1.1"
+      - name: job-1.2
+        run: echo "Job 1.2"
+  job-2:
+    runs-on: ubuntu-slim
+    steps:
+      - name: job-2.1
+        run: echo "Job 2.1"
+  job-3:
+    runs-on: ubuntu-slim
+    needs:
+      - job-1
+      - job-2
+    steps:
+      - name: job-3.1
+        run: echo "Job 3.1"
+  job-4:
+    runs-on: ubuntu-slim
+    needs:
+      - job-3
+    steps:
+      - name: job-4.1
+        run: echo "Job 4.1"
