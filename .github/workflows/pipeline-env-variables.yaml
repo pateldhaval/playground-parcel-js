@@ -1,4 +1,4 @@
-name: env-vars-workflow
+name: pipeline-env-vars-workflow
 
 on:
   workflow_dispatch:
