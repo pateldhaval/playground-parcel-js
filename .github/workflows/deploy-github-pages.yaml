@@ -18,7 +18,14 @@ jobs:
         uses: pnpm/action-setup@v6
         with:
           version: 11
-      - name: Print Node Version
+          cache: true
+      - name: Print versions
         run: |
+          echo Node
           node --version
+          echo PNPM
           pnpm --version
+      - name: Install dependencies
+        run: pnpm ci
+      - name: Execute testing
+        run: pnpm test
