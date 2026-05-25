@@ -1,0 +1,22 @@
+name: Deploy to Github Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - .github/workflows/*
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v6
+      - name: Print Node Version
+        run: |
+          node --version
+          pnpm --version
