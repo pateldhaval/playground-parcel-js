@@ -1,0 +1,28 @@
+name: env-vars-workflow
+
+on:
+  workflow_dispatch:
+env:
+  VAR_GLOBAL: "I'm Global Variable"
+
+jobs:
+  job_1:
+    env:
+      VAR_JOB: "I'm Job Variable"
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: step-1
+        env:
+          VAR_STEP: "I'm Step Variable"
+        run: |
+          echo "On Step-1"
+          echo "Global Variable: $VAR_GLOBAL"
+          echo "Job Variable: $VAR_JOB"
+          echo "Step Variable: $VAR_STEP"
+      - name: step-2
+        run: |
+          echo "On Step-2"
+          echo "Global Variable: $VAR_GLOBAL"
+          echo "Job Variable: $VAR_JOB"
+          echo "Step Variable: $VAR_STEP"
